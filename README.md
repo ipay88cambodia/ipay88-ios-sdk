@@ -180,6 +180,7 @@ extension YourViewController: : IPay88Delegate {
 ```
 + For Example:
 ```swift
+// MARK: - Step3. Implement IPay88Delegate to Get Payment Status
 extension YourViewController: : IPay88Delegate {
     func onResponse(payResponse: IPay88PayResponse) {
         if let status = payResponse.status {
@@ -194,6 +195,7 @@ extension YourViewController: : IPay88Delegate {
 ```
 ### 4.3 Setup payment delegate and payment request for `IPay88ViewController`, and present it to the user
 ```swift
+// MARK: - Step4. Present the IPay88ViewController to the user
 let ipay88VC = IPay88ViewController()
 ipay88VC.delegate = self
 ipay88VC.payRequest = payRequest
