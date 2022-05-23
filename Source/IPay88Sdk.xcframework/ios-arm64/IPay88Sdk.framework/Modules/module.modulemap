@@ -1,0 +1,11 @@
+framework module IPay88Sdk {
+  umbrella header "IPay88Sdk.h"
+
+  export *
+  module * { export * }
+}
+
+module IPay88Sdk.Swift {
+    header "IPay88Sdk-Swift.h"
+    requires objc
+}
