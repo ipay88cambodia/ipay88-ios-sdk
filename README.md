@@ -22,14 +22,12 @@ No            |   Date            |    By         |   Version         |   Suppor
 # Table of Contents
 ## 1. Requirements
 1. Please share your App Bundle Identifier (AppId) to IPay88 team:
-```
-Inside Xcode, Your Project > Target > Identity > Bundle Identifier: xxx.xxx.xxx
-```
+    - Inside Xcode, Select `Your Project` > TARGETS `Your Target` > Inside Tab `General` > `Identity` > Bundle Identifier `xxx.xxx.xxx`
 2. Then IPay88 team will setup your AppId into IPay88 system to allow you to use IPay88 Mobile Payment channel. 
 3. And then IPay88 team will share you these credentials:
-    + Merchant Code (KHxxxxxx)
-    + Merchant Key  (XXxxxxxx)
-    + ClientAppSecret (IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx). Please refer to [2.2 Setup ClientAppSecret inside Info.plist](#22-setup-clientappsecret-inside-infoplist)
+    - Merchant Code (KHxxxxxx)
+    - Merchant Key  (XXxxxxxx)
+    - ClientAppSecret (IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx). Please refer to [2.2 Setup ClientAppSecret inside Info.plist](#22-setup-clientappsecret-inside-infoplist)
 
 
 ## 2. Setup
