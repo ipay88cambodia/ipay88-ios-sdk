@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/IPay88Sdk-Swift.h</key>
 		<data>
-		OqrKPwwNI01kaYMhUCUMgm+ZxMo=
+		HI1j1VcUGLur0rPx0WFGFuDzbL4=
 		</data>
 		<key>Headers/IPay88Sdk.h</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		YoBA7ChoHh0C/CBEi80HdYedWFY=
+		aUO+yTZ2CSaxBXomO3sYZn8A5Uo=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		7dFPdF6D/P+XqnptrNVG3EcLGv4=
+		Ie6eHNDunGgD8ayBpK3itJacC68=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,7 +54,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			etMKahaFTosEmBR1juqWgSH1uIzeO8GuD5cRYdYu8X8=
+			rC/ZznM9C5/A1Cb/bc/Xs+PZyItIWsxp4tk1VO90Vx0=
 			</data>
 		</dict>
 		<key>Headers/IPay88Sdk.h</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8t6iu4aoETCt4RohCOYaJN9PSI6h39OmJ976bWCH3gI=
+			FPbxXPu7uGXsKjyo5XlDv5OnZRD/pyY+19PrQUda3J4=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UrJNpLrZQMJaXsLqw29QFEbPJHl5SmMnVX8mYaQbOxI=
+			vch1HrbyERU+ya1bYSfHY4BC1KfFlMYlezrii4GaLms=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

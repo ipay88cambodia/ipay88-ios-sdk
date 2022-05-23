@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/IPay88Sdk-Swift.h</key>
 		<data>
-		KV+Ew+AlRW9WTuzuaiw+Ei8pV8E=
+		473QuxhtX07b7dR28GXCdJ470aM=
 		</data>
 		<key>Headers/IPay88Sdk.h</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6ES4O8Xw4ahtTlbBD4RyoTSwoQg=
+		pegEd866NcfZsho7olx3EOF06A0=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ULaxLORsHFw6RFY/pelfY6QgY4s=
+		/X9wAHwzWLx9pP8OLWtsk5uAVxU=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ZPo1HCVo1bbBnN+gAdLykY7QAhM=
+		TfM2b8uCfDmU9xS263LqV6qm5VM=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		BayYkTmedAFgBKBh6JkWQrk3+rE=
+		EZJAjT6E5OrZwXw2J2HwWDP18hc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,7 +66,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ATsX2fvYsvhD5VziJzkmvds52QRdbwQIRBvCKDc3Reo=
+			eRCOd3G49Go+IVFlEpmrUU5vRFf+uyPYMy8x6FtpKjc=
 			</data>
 		</dict>
 		<key>Headers/IPay88Sdk.h</key>
@@ -94,14 +94,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xkakd4fnZbmQbjBvl/Lkejhv4jkE3QMwCdApmOGiFF4=
+			4hTs+2ztSyJZv368adWqUOjVaT5QGAB4gSiJVJJYnmU=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xvi3E0K2ra4Nfjp7d2OZqUCpk28TV82mOQK5dss6A9s=
+			m4DNRbqepsUHTXzjauv/E7oN7eQFDSRoyReF6mJ8s7c=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -115,14 +115,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hhm23TrZNyAsLb3UAP79Ul3kc1L3xi5HweOHRQSLYdE=
+			lIKiAeGbzymhdhi26Lhr3oCBX1/eBQXa1GRXd6FQXsA=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ho18A2pOn3lPGXj85QsV079wyhUZshCJnTPr1TlQlsc=
+			cHuqx8u8QnY7fSNs4N8HZChugQwtfiMooBNEzu5zQQc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
