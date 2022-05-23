@@ -2,7 +2,9 @@
 //  IPay88Sdk.h
 //  IPay88Sdk
 //
-//  Created by iPAY88 on 24/3/22.
+//  Created by kunTola on 24/3/22.
+//  Tel.017847800
+//  Email.kuntola883@gmail.com
 //
 
 #import <Foundation/Foundation.h>

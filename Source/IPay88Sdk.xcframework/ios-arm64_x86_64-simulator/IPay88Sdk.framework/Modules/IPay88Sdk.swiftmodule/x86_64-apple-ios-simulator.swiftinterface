@@ -116,10 +116,10 @@ extension Foundation.URLSessionConfiguration {
   }
 }
 @_hasMissingDesignatedInitializers public class IPay88PayResponse : Swift.Codable {
-  public var paymentID: Swift.Int?, status: Swift.Int?
+  public var paymentId: Swift.Int?, status: Swift.Int?
   public var amount: Swift.Double?
   public var merchantCode: Swift.String?, refNo: Swift.String?
-  public var currency: Swift.String?, remark: Swift.String?, transID: Swift.String?, authCode: Swift.String?
+  public var currency: Swift.String?, remark: Swift.String?, transId: Swift.String?, authCode: Swift.String?
   public var errDesc: Swift.String?, signature: Swift.String?
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
@@ -179,6 +179,8 @@ public protocol IPay88Delegate {
     get
   }
   public var backendURL: Swift.String?
+  public var eId: Swift.String?
+  public var errDesc: Swift.String?
   public var environment: IPay88Sdk.IPay88PayRequest.Environment
   public enum Environment : Swift.String {
     case DVL
@@ -205,13 +207,25 @@ public protocol IPay88Delegate {
   public func getBackendURL() -> Swift.String
   public func getPaymentUrl() -> Swift.String
   public func getDeeplinkListUrl() -> Swift.String
+  public func getQueryUrl() -> Swift.String
+  public func getCancelUrl() -> Swift.String
+  public func getSignature(paymentId: Swift.Int, status: Swift.Int) -> Swift.String
   public func getAmount() -> Swift.String
-  public func generateFormBody() -> Foundation.Data
-  public func params() -> [Swift.String : Any]
+  public func getFormBody() -> Foundation.Data
+  public func getFormBodyQuery() -> Foundation.Data
+  public func params() -> Foundation.Data
   public func validate() -> Swift.String?
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   @objc deinit
+}
+@_hasMissingDesignatedInitializers public class IPay88PaymentInfo : Swift.Codable {
+  public var eId: Swift.String?
+  public var errDesc: Swift.String?
+  required public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 extension IPay88Sdk.IPay88PayRequest.Environment : Swift.Equatable {}
 extension IPay88Sdk.IPay88PayRequest.Environment : Swift.Hashable {}
