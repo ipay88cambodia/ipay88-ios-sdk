@@ -81,6 +81,11 @@ dependencies: [
   + Dependency Rule: `Exact Version` > Enter the version number `1.0.0`
   + Add to Project: `Your Project Name`
 
+#### How To Hard Reset Swift Package
+- Step1. Navigate to `~/Library/Caches/org.swift.swiftpm/repositories` and deleting the folder and lock file related to the package
+- Step2. Then, in Xcode, Goto `File` > `Swift Packages` > `Reset Package Caches`
+- Done.
+
 ## 3. Payment Request & Response
 ### 3.1 Payment Request
 #### 3.1.1 Payment Request Object
