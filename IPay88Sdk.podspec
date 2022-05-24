@@ -17,5 +17,5 @@ Pod::Spec.new do |spec|
 	
 	# Published binaries
 	spec.ios.deployment_target   = "11.0"
-	spec.ios.vendored_frameworks = "IPay88Sdk.xcframework"
+	spec.ios.vendored_frameworks = "Source/IPay88Sdk.xcframework"
 end
