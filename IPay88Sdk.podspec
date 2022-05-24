@@ -10,12 +10,12 @@ Pod::Spec.new do |spec|
 							- Online Banking (ACLEDA XPay, CAMPU Direct Debit, Chip Mong Pay, AMK Online Card, Prince Bank QR, etc.)
 						DESC
 	spec.homepage     = "https://github.com/ipay88cambodia/ipay88-ios-sdk"
-	spec.license      = { :type => "MIT" }
+	spec.license      = { :type => "MIT", :file => "LICENSE" }
 	spec.author       = { "ipay88-kh" => "tola.kun@ipay88.com.kh" }
 	spec.platform     = :ios, "11.0"
 	spec.source       = { :git => "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", :tag => "#{spec.version}" }
 	spec.source_files = "Source/**"
-	
+
 	# Published binaries
 	vendored_frameworks = "IPay88Sdk.xcframework"
 end
