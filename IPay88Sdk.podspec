@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
 	spec.license      = { :type => "MIT", :file => "LICENSE" }
 	spec.author       = { "ipay88-kh" => "tola.kun@ipay88.com.kh" }
 	spec.platform     = :ios
-	spec.source       = { :git => "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", :tag => "#{spec.version}" }
+	spec.source       = { :git => "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", :branch => "main", :tag => "#{spec.version}" }
 	
 	# Published binaries
 	spec.ios.deployment_target   = "11.0"
