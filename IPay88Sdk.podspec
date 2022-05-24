@@ -14,7 +14,8 @@ Pod::Spec.new do |spec|
 	spec.author       = { "ipay88-kh" => "tola.kun@ipay88.com.kh" }
 	spec.platform     = :ios, "11.0"
 	spec.source       = { :git => "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", :tag => "#{spec.version}" }
+	spec.source_files = "Source/**"
 	
 	# Published binaries
-	vendored_frameworks = "Source/IPay88Sdk.xcframework"
+	vendored_frameworks = "IPay88Sdk.xcframework"
 end
