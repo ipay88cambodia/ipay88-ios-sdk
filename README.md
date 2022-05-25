@@ -7,6 +7,7 @@ We accept online payments from various methods, such as:
 * [Demo App](https://testflight.apple.com/join/82WBr9P1)
 
 # IPay88 SDK for iOS
+[//]: <> (https://img.shields.io/badge/pod-v1.0.0-blue)
 [![](https://img.shields.io/cocoapods/v/IPay88Sdk)](https://img.shields.io/cocoapods/v/IPay88Sdk)
 [![](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange)
 
@@ -73,14 +74,14 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for au
 
 Once you have your Swift package set up, adding `IPay88Sdk` as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
-#### - Via `Package.swift`
+##### - Via `Package.swift`
 ```swift
 dependencies: [
     .package(url: "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", .exact(Version("1.0.0")))
 ]
 ```
 
-#### - Via `Xcode's UI`
+##### - Via `Xcode's UI`
 - Step 1. Inside Xcode, Goto File > Add Packages...
 - Step 2. An Alert Dialog appears > Inside the Search box at the top-right of the alert windows
   + Copy this URL and paste:
@@ -91,7 +92,7 @@ dependencies: [
   + Dependency Rule: `Exact Version` > Enter the version number `1.0.0`
   + Add to Project: `Your Project Name`
 
-#### * Note: How To Hard Reset Swift Package
+##### * Note: How To Hard Reset Swift Package
 - Step1. Navigate to `~/Library/Caches/org.swift.swiftpm/repositories` and deleting the folder and lock file related to the package
 - Step2. Then, in Xcode, Goto `File` > `Swift Packages` > `Reset Package Caches`
 - Done.
