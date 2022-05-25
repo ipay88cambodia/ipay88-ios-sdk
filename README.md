@@ -7,7 +7,8 @@ We accept online payments from various methods, such as:
 * [Demo App](https://testflight.apple.com/join/82WBr9P1)
 
 # IPay88 SDK for iOS
-[![](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)
+[![](https://img.shields.io/cocoapods/v/IPay88Sdk)](https://img.shields.io/cocoapods/v/IPay88Sdk)
+[![](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange)
 
 ## 1. SDK Payment Flow
 1. Your application initializes the library.
@@ -59,6 +60,15 @@ No            |   Date            |    By         |   Version         |   Suppor
 ```
 
 ### 2.3 Dependencies
+#### CocoaPods
+
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `IPay88Sdk` into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+pod 'IPay88Sdk'
+```
+
+#### Swift Package Manager
 The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
 
 Once you have your Swift package set up, adding `IPay88Sdk` as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
