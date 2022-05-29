@@ -9,6 +9,7 @@ We accept online payments from various methods, such as:
 # IPay88 SDK for iOS
 [//]: <> (https://img.shields.io/badge/pod-v1.0.0-blue)
 [![](https://img.shields.io/cocoapods/v/IPay88Sdk)](https://img.shields.io/cocoapods/v/IPay88Sdk)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange)
 
 ## 1. SDK Payment Flow
@@ -23,9 +24,12 @@ No            |   Date            |    By         |   Version         |   Suppor
 
 # Table of Contents
 ## 1. Requirements
-1. Please share your App Bundle Identifier (AppId) to IPay88 team:
-    - Inside Xcode, Select `Your Project` > TARGETS `Your Target` > Inside Tab `General` > `Identity` > Bundle Identifier `xxx.xxx.xxx`
-2. Then IPay88 team will setup your AppId into IPay88 system to allow you to use IPay88 Mobile Payment channel. 
+1. Please share your App Information to IPay88 team:
+    - AppId (App Bundle Identifier)
+      - Inside Xcode, Select `Your Project` > TARGETS `Your Target` > Inside Tab `General` > `Identity` > Bundle Identifier `xxx.xxx.xxx`
+    - App Links (Optional)
+      - For navigation back from Bank App to your App after make payment
+2. Then IPay88 team will setup your App Information into IPay88 system to allow you to use IPay88 Mobile Payment channel. 
 3. And then IPay88 team will share you these credentials:
     - Merchant Code (KHxxxxxx)
     - Merchant Key  (XXxxxxxx)
@@ -69,8 +73,16 @@ No            |   Date            |    By         |   Version         |   Suppor
 pod 'IPay88Sdk'
 ```
 
+#### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate `IPay88Sdk` into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ruby
+github "IPay88Cambodia/IPay88-iOS-Sdk"
+```
+
 #### Swift Package Manager
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
+[Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
 
 Once you have your Swift package set up, adding `IPay88Sdk` as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
@@ -181,16 +193,6 @@ payRequest.backendURL = "http://www.myshop.com/backend_page.php"
 ### 4.2 Create Payment Delegate
 + Your ViewController should adopt to `IPay88Delegate`:
 ```swift
-extension YourViewController: : IPay88Delegate {
-    func onResponse(payResponse: IPay88PayResponse) {
-    }
-
-    func onFailure(message: String) {
-    }
-}
-```
-+ For Example:
-```swift
 // MARK: - Step3. Implement IPay88Delegate to Get Payment Status
 extension YourViewController: : IPay88Delegate {
     func onResponse(payResponse: IPay88PayResponse) {
@@ -204,13 +206,11 @@ extension YourViewController: : IPay88Delegate {
     }
 }
 ```
-### 4.3 Setup payment delegate and payment request for `IPay88ViewController`, and present it to the user
+
+### 4.3 Invoke Checkout Function
 ```swift
-// MARK: - Step4. Present the IPay88ViewController to the user
-let ipay88VC = IPay88ViewController()
-ipay88VC.delegate = self
-ipay88VC.payRequest = payRequest
-present(ipay88VC, animated: true, completion: nil)
+// MARK: - Step4. Checkout
+IPay88Sdk.shared.checkout(currentViewController: self, payRequest: payRequest, delegate: self)
 ```
 
 ## 5. Signature Response
