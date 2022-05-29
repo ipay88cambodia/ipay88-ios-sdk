@@ -37,22 +37,7 @@ No            |   Date            |    By         |   Version         |   Suppor
 
 
 ## 2. Setup
-### 2.1 Configuration inside Info.plist to access some Bank UAT Servers (Optional)
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>App Transport Security Settings</key>
-    <dict>
-        <key>Allow Arbitrary Loads</key>
-        <true/>
-    </dict>
-</dict>
-</plist>
-```
-
-### 2.2 Setup ClientAppSecret inside Info.plist
+### 2.1 Setup ClientAppSecret inside Info.plist
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -64,7 +49,7 @@ No            |   Date            |    By         |   Version         |   Suppor
 </plist>
 ```
 
-### 2.3 Dependencies
+### 2.2 Dependencies
 #### CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `IPay88Sdk` into your Xcode project using CocoaPods, specify it in your `Podfile`:
@@ -108,6 +93,7 @@ dependencies: [
 - Step1. Navigate to `~/Library/Caches/org.swift.swiftpm/repositories` and deleting the folder and lock file related to the package
 - Step2. Then, in Xcode, Goto `File` > `Swift Packages` > `Reset Package Caches`
 - Done.
+
 
 ## 3. Payment Request & Response
 ### 3.1 Payment Request
@@ -212,6 +198,7 @@ extension YourViewController: : IPay88Delegate {
 // MARK: - Step4. Checkout
 IPay88Sdk.shared.checkout(currentViewController: self, payRequest: payRequest, delegate: self)
 ```
+
 
 ## 5. Signature Response
 + If the Merchant request is successful the response message will contain as SHA1 hashed signature. 
