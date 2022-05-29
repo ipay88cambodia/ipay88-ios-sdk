@@ -33,7 +33,7 @@ No            |   Date            |    By         |   Version         |   Suppor
 3. And then IPay88 team will share you these credentials:
     - Merchant Code (KHxxxxxx)
     - Merchant Key  (XXxxxxxx)
-    - ClientAppSecret (IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx). Please refer to [2.2 Setup ClientAppSecret inside Info.plist](#22-setup-clientappsecret-inside-infoplist)
+    - ClientAppSecret (IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx). Please refer to [2.1 Setup ClientAppSecret inside Info.plist](#21-setup-clientappsecret-inside-infoplist)
 
 
 ## 2. Setup
