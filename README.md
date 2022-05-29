@@ -28,7 +28,7 @@ No            |   Date            |    By         |   Version         |   Suppor
     - AppId (App Bundle Identifier)
       - Inside Xcode, Select `Your Project` > TARGETS `Your Target` > Inside Tab `General` > `Identity` > Bundle Identifier `xxx.xxx.xxx`
     - App Links (Optional)
-      - For navigation back from Bank App to your App after make payment
+      - For navigation back from `Bank App` to `Your App` after make payment
 2. Then IPay88 team will setup your App Information into IPay88 system to allow you to use IPay88 Mobile Payment channel. 
 3. And then IPay88 team will share you these credentials:
     - Merchant Code (KHxxxxxx)
