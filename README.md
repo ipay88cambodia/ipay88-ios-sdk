@@ -12,15 +12,11 @@ We accept online payments from various methods, such as:
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange)
 
-## 1. SDK Payment Flow
+## SDK Payment Flow
 1. Your application initializes the library.
 2. After buyers complete their payments, the library returns a delegate to your application with the status of the payment and the transaction id.
 3. After the library flow is complete, a delegate result will be posted to be received by your application.
 
-## 2. Version Supports
-No            |   Date            |    By         |   Version         |   Supports    |   Features
-------------- | :---------------: | ------------- | :---------------: | ------------- | -------------               
-1             | 2022-May-20       | kuntola       |   1.0.0           | iOS 11 and later  | - Redirect Payment
 
 # Table of Contents
 ## 1. Requirements
