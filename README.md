@@ -27,6 +27,8 @@ No            |   Date            |    By         |   Version         |   Suppor
 1. Please share your App Information to IPay88 team:
     - AppId (App Bundle Identifier)
       - Inside Xcode, Select `Your Project` > TARGETS `Your Target` > Inside Tab `General` > `Identity` > Bundle Identifier `xxx.xxx.xxx`
+    - App Name (Optional)
+      - For showing on the return button on some banks app. Eg: `RETURN TO LEGEND CINEMA`
     - App Links (Optional)
       - For navigation back from `Bank App` to `Your App` after make payment
 2. Then IPay88 team will setup your App Information into IPay88 system to allow you to use IPay88 Mobile Payment channel. 
