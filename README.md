@@ -26,7 +26,7 @@ No            |   Date            |    By         |   Version         |   Suppor
 ## 1. Requirements
 1. Please share your App Information to IPay88 team:
     - AppId (App Bundle Identifier)
-      - Inside Xcode, Select `Your Project` > TARGETS `Your Target` > Inside Tab `General` > `Identity` > Bundle Identifier `xxx.xxx.xxx`
+      - Inside Xcode, Select `Your Project` > TARGETS `Your Target App` > Inside Tab `General` > `Identity` > Bundle Identifier `xxx.xxx.xxx`
     - App Name (Optional)
       - For showing on the return button on some banks app. Eg: `RETURN TO LEGEND CINEMA`
     - App Links (Optional)
