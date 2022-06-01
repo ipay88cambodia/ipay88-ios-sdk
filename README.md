@@ -194,7 +194,7 @@ extension YourViewController: : IPay88Delegate {
 ### 4.3 Invoke Checkout Function
 ```swift
 // MARK: - Step4. Checkout
-IPay88Sdk.shared.checkout(currentViewController: self, payRequest: payRequest, delegate: self)
+IPay88SDK.shared.checkout(currentViewController: self, payRequest: payRequest, delegate: self)
 ```
 
 
