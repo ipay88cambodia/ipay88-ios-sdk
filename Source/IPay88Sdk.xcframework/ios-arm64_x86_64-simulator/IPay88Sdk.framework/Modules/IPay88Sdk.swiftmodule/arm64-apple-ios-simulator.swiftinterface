@@ -125,29 +125,12 @@ extension Foundation.URLSessionConfiguration {
   public func encode(to encoder: Swift.Encoder) throws
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IPay88ViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public var delegate: IPay88Sdk.IPay88Delegate!
-  @_Concurrency.MainActor(unsafe) public var payRequest: IPay88Sdk.IPay88PayRequest!
-  @objc dynamic public init()
+@_hasMissingDesignatedInitializers public class IPay88SDK {
+  public static let shared: IPay88Sdk.IPay88SDK
+  public func checkout(currentViewController: UIKit.UIViewController, payRequest: IPay88Sdk.IPay88PayRequest, delegate: IPay88Sdk.IPay88Delegate)
   @objc deinit
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
 }
-extension IPay88Sdk.IPay88ViewController : WebKit.WKNavigationDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: Swift.Error)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
-}
-extension IPay88Sdk.IPay88ViewController : WebKit.WKUIDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, createWebViewWith configuration: WebKit.WKWebViewConfiguration, for navigationAction: WebKit.WKNavigationAction, windowFeatures: WebKit.WKWindowFeatures) -> WebKit.WKWebView?
-}
-extension IPay88Sdk.IPay88ViewController : WebKit.WKScriptMessageHandler {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
-}
-public protocol IPay88Delegate {
+public protocol IPay88Delegate : ObjectiveC.NSObjectProtocol {
   func onResponse(payResponse: IPay88Sdk.IPay88PayResponse)
   func onFailure(message: Swift.String)
 }
@@ -161,6 +144,12 @@ public protocol IPay88Delegate {
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class IPay88AppDelegate {
+  public static let shared: IPay88Sdk.IPay88AppDelegate
+  public func application(_ application: UIKit.UIApplication, didFinishLaunchingWithOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  public func application(_ application: UIKit.UIApplication, open url: Foundation.URL, sourceApplication: Swift.String?, annotation: Any?)
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class IPay88PayRequest : Swift.Codable {
   public var merchantCode: Swift.String
