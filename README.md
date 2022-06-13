@@ -25,17 +25,15 @@ We accept online payments from various methods, such as:
       - Inside Xcode, Select `Your Project` > TARGETS `Your Target App` > Inside Tab `General` > `Identity` > Bundle Identifier `xxx.xxx.xxx`
     - App Name (Optional)
       - For showing on the return button on some banks app. Eg: `RETURN TO LEGEND CINEMA`
-    - App Links (Optional)
-      - For navigation back from `Bank App` to `Your App` after make payment
 2. Then IPay88 team will setup your App Information into IPay88 system to allow you to use IPay88 Mobile Payment channel. 
 3. And then IPay88 team will share you these credentials:
     - Merchant Code (KHxxxxxx)
     - Merchant Key  (XXxxxxxx)
-    - ClientAppSecret (IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx). Please refer to [2.1 Setup ClientAppSecret inside Info.plist](#21-setup-clientappsecret-inside-infoplist)
+    - ClientAppSecret (IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx). Please refer to [2.1 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist](#21-setup-clientappsecret-and-cfbundleurlschemes-inside-infoplist)
 
 
 ## 2. Setup
-### 2.1 Setup ClientAppSecret inside Info.plist
+### 2.1 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -43,6 +41,16 @@ We accept online payments from various methods, such as:
 <dict>
     <key>kh.com.ipay88.sdk.ClientAppSecret</key>
     <string>IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx</string>
+    
+    <key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>IPAY88-$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>
 ```
