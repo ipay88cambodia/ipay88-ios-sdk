@@ -55,7 +55,59 @@ We accept online payments from various methods, such as:
 </plist>
 ```
 
-### 2.2 Dependencies
+### 2.2 Connect Your App Delegate
+Replace the code in `AppDelegate.swift` method with the following code. This code initializes the SDK when your app launches, and allows the SDK handle URL Scheme (Deeplink).
+```swift
+// AppDelegate.swift
+import UIKit
+import IPay88Sdk
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        IPay88AppDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
+        
+        return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        IPay88AppDelegate.shared.application(
+            app,
+            open: url,
+            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+        )
+    }
+}
+```
+
+iOS 13 moved opening URL functionality to the SceneDelegate. If you are using iOS 13, add the following method to your SceneDelegate so that operations like logging in or sharing function as intended:
+```swift
+// SceneDelegate.swift
+import UIKit
+import IPay88Sdk
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
+    @available(iOS 13.0, *)
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let incomingURL = URLContexts.first?.url else { return }
+        IPay88AppDelegate.shared.application(
+            UIApplication.shared,
+            open: incomingURL,
+            sourceApplication: nil,
+            annotation: [UIApplication.OpenURLOptionsKey.annotation]
+        )
+    }
+}
+```
+
+
+### 2.3 Dependencies
 #### CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `IPay88Sdk` into your Xcode project using CocoaPods, specify it in your `Podfile`:
