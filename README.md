@@ -85,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-iOS 13 moved opening URL functionality to the SceneDelegate. If you are using iOS 13, add the following method to your SceneDelegate so that operations like logging in or sharing function as intended:
+iOS 13 moved opening URL functionality to the `SceneDelegate.swift`. If you are using iOS 13, add the following method to your SceneDelegate so that operations like logging in or sharing function as intended:
 ```swift
 // SceneDelegate.swift
 import UIKit
