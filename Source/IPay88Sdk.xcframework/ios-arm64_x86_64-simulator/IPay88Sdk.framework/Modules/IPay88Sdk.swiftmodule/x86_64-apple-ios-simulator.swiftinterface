@@ -167,6 +167,7 @@ public protocol IPay88Delegate : ObjectiveC.NSObjectProtocol {
     get
   }
   public var backendURL: Swift.String?
+  public var language: Swift.String?
   public var eId: Swift.String?
   public var errDesc: Swift.String?
   public var environment: IPay88Sdk.IPay88PayRequest.Environment
@@ -190,7 +191,7 @@ public protocol IPay88Delegate : ObjectiveC.NSObjectProtocol {
     }
   }
   required public init()
-  public init(environment: IPay88Sdk.IPay88PayRequest.Environment, merchantCode: Swift.String, merchantKey: Swift.String, paymentId: Swift.Int, refNo: Swift.String, amount: Swift.Double, currency: IPay88Sdk.IPay88PayRequest.Currency, prodDesc: Swift.String, userName: Swift.String, userEmail: Swift.String, userContact: Swift.String, remark: Swift.String?, backendURL: Swift.String?)
+  public init(environment: IPay88Sdk.IPay88PayRequest.Environment, merchantCode: Swift.String, merchantKey: Swift.String, paymentId: Swift.Int, refNo: Swift.String, amount: Swift.Double, currency: IPay88Sdk.IPay88PayRequest.Currency, prodDesc: Swift.String, userName: Swift.String, userEmail: Swift.String, userContact: Swift.String, remark: Swift.String?, backendURL: Swift.String?, language: Swift.String?)
   public func adjust() -> IPay88Sdk.IPay88PayRequest
   public func getBackendURL() -> Swift.String
   public func getPaymentUrl() -> Swift.String
