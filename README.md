@@ -43,14 +43,14 @@ We accept online payments from various methods, such as:
     <string>IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx</string>
     
     <key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>IPAY88-$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-			</array>
-		</dict>
-	</array>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>IPAY88-$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+            </array>
+        </dict>
+    </array>
 </dict>
 </plist>
 ```
