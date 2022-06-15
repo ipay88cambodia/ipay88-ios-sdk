@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 						DESC
 	spec.homepage     = "https://github.com/ipay88cambodia/ipay88-ios-sdk"
 	spec.license      = { :type => "MIT", :file => "LICENSE" }
-	spec.author       = { "ipay88-kh" => "tola.kun@ipay88.com.kh" }
+	spec.author       = { "kuntola" => "tola.kun@ipay88.com.kh" }
 	spec.platform     = :ios
 	spec.source       = { :git => "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", :branch => "main", :tag => "#{spec.version}" }
 	
