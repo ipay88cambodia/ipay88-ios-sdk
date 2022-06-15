@@ -39,7 +39,7 @@ We accept online payments from various methods, such as:
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `IPay88Sdk` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'IPay88Sdk'
+pod 'IPay88Sdk', '1.0.0-SNAPSHOT'
 ```
 
 #### Carthage
@@ -47,7 +47,7 @@ pod 'IPay88Sdk'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate `IPay88Sdk` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ruby
-github "IPay88Cambodia/IPay88-iOS-Sdk"
+github "IPay88Cambodia/IPay88-iOS-Sdk" "1.0.0-SNAPSHOT"
 ```
 
 #### Swift Package Manager
@@ -58,7 +58,7 @@ Once you have your Swift package set up, adding `IPay88Sdk` as a dependency is a
 ##### - Via `Package.swift`
 ```swift
 dependencies: [
-    .package(url: "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", .exact(Version("1.0.0")))
+    .package(url: "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", .exact(Version("1.0.0-SNAPSHOT")))
 ]
 ```
 
@@ -70,7 +70,7 @@ dependencies: [
     https://github.com/ipay88cambodia/ipay88-ios-sdk.git
     ```
 - Step 3. In the search result  > Select `ipay88-ios-sdk`
-  + Dependency Rule: `Exact Version` > Enter the version number `1.0.0`
+  + Dependency Rule: `Exact Version` > Enter the version number `1.0.0-SNAPSHOT`
   + Add to Project: `Your Project Name`
 
 ##### * Note: How To Hard Reset Swift Package
