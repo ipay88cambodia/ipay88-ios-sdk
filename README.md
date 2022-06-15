@@ -29,11 +29,57 @@ We accept online payments from various methods, such as:
 3. And then IPay88 team will share you these credentials:
     - Merchant Code (KHxxxxxx)
     - Merchant Key  (XXxxxxxx)
-    - ClientAppSecret (IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx). Please refer to [2.1 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist](#21-setup-clientappsecret-and-cfbundleurlschemes-inside-infoplist)
+    - ClientAppSecret (IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx). Please refer to [2.2 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist](#22-setup-clientappsecret-and-cfbundleurlschemes-inside-infoplist)
 
 
 ## 2. Setup
-### 2.1 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist
+### 2.1 Dependencies
+#### CocoaPods
+
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `IPay88Sdk` into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+pod 'IPay88Sdk'
+```
+
+#### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate `IPay88Sdk` into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ruby
+github "IPay88Cambodia/IPay88-iOS-Sdk"
+```
+
+#### Swift Package Manager
+[Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
+
+Once you have your Swift package set up, adding `IPay88Sdk` as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+##### - Via `Package.swift`
+```swift
+dependencies: [
+    .package(url: "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", .exact(Version("1.0.0")))
+]
+```
+
+##### - Via `Xcode's UI`
+- Step 1. Inside Xcode, Goto File > Add Packages...
+- Step 2. An Alert Dialog appears > Inside the Search box at the top-right of the alert windows
+  + Copy this URL and paste:
+    ```
+    https://github.com/ipay88cambodia/ipay88-ios-sdk.git
+    ```
+- Step 3. In the search result  > Select `ipay88-ios-sdk`
+  + Dependency Rule: `Exact Version` > Enter the version number `1.0.0`
+  + Add to Project: `Your Project Name`
+
+##### * Note: How To Hard Reset Swift Package
+- Step1. Navigate to `~/Library/Caches/org.swift.swiftpm/repositories` and deleting the folder and lock file related to the package
+- Step2. Then, in Xcode, Goto `File` > `Swift Packages` > `Reset Package Caches`
+- Done.
+
+
+### 2.2 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -55,7 +101,7 @@ We accept online payments from various methods, such as:
 </plist>
 ```
 
-### 2.2 Connect Your App Delegate
+### 2.3 Connect Your App Delegate
 Replace the code in `AppDelegate.swift` method with the following code. This code initializes the SDK when your app launches, and allows the SDK handle URL Scheme (Deeplink).
 ```swift
 // AppDelegate.swift
@@ -106,51 +152,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 ```
 
-
-### 2.3 Dependencies
-#### CocoaPods
-
-[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `IPay88Sdk` into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-pod 'IPay88Sdk'
-```
-
-#### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate `IPay88Sdk` into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ruby
-github "IPay88Cambodia/IPay88-iOS-Sdk"
-```
-
-#### Swift Package Manager
-[Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
-
-Once you have your Swift package set up, adding `IPay88Sdk` as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
-
-##### - Via `Package.swift`
-```swift
-dependencies: [
-    .package(url: "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", .exact(Version("1.0.0")))
-]
-```
-
-##### - Via `Xcode's UI`
-- Step 1. Inside Xcode, Goto File > Add Packages...
-- Step 2. An Alert Dialog appears > Inside the Search box at the top-right of the alert windows
-  + Copy this URL and paste:
-    ```
-    https://github.com/ipay88cambodia/ipay88-ios-sdk.git
-    ```
-- Step 3. In the search result  > Select `ipay88-ios-sdk`
-  + Dependency Rule: `Exact Version` > Enter the version number `1.0.0`
-  + Add to Project: `Your Project Name`
-
-##### * Note: How To Hard Reset Swift Package
-- Step1. Navigate to `~/Library/Caches/org.swift.swiftpm/repositories` and deleting the folder and lock file related to the package
-- Step2. Then, in Xcode, Goto `File` > `Swift Packages` > `Reset Package Caches`
-- Done.
 
 
 ## 3. Payment Request & Response
