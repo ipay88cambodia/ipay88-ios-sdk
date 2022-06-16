@@ -175,7 +175,7 @@ userName: String           |   &#10003;        |   Customer name in merchant's s
 userEmail: String          |   &#10003;        |   Customer email address in merchant's system with valid email format, E.g. johnwoo@yahoo.com
 userContact: String        |   &#10003;        |   Customer contact number in merchant's system, E.g. 60123436789
 remark: String?            |                   |   Remark for particular transaction. Note: Special characters is not allowed.
-backendURL: String?        |                   |   Specify a valid merchant callback URL when payment success. E.g. http://www.myshop.com/backend_page.php
+backendURL: String?        |                   |   Specify a valid merchant callback URL when payment success (Please refer to [6. Backend Post Feature](#6-backend-post-feature)). E.g. http://www.myshop.com/backend_page.php
 #### 3.1.3 Environment
 ```swift
 public enum Environment {
