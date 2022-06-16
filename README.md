@@ -363,7 +363,7 @@ PHP
         echo "RECEIVEOK";
     }
     else {
-        // update order to FAIL }
+        // Update order to FAIL }
     }
 ?>
 ```
