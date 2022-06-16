@@ -199,13 +199,13 @@ class IPay88PayResponse
 #### 3.2.2 Payment Response Properties
 Property Name                |  Required         |   Description
 -------------              | :---------------: | -------------
-merchantCode: String?      |   &#10003;        |   Merchant Code provided by iPay88 and use to uniquely identify the Merchant. E.g. KH00001
+merchantCode: String?      |   &#10003;        |   Merchant Code provided by IPay88 and use to uniquely identify the Merchant. E.g. KH00001
 paymentId: Int?            |   &#10003;        |   Please refer to [Appendix I (1. PaymentId)](#1-paymentid) for possible PaymentId value return to BackendPostURL.
 refNo: String?             |   &#10003;        |   The request Reference number for merchant reference purposes, should be unique for each transaction.
 amount: Double?            |   &#10003;        |   Payment amount with two decimals
 currency: String?          |   &#10003;        |   Currency code that based on standard ISO (KHR or USD)
 remark: String?            |                   |   Remark for particular transaction.
-transId: String?           |   &#10003;        |   iPay88 Transaction ID. E.g. T019988877700
+transId: String?           |   &#10003;        |   IPay88 Transaction ID. E.g. T019988877700
 authCode: String?          |                   |   Bank reference number. Note: Sometime bank may not return reference number to gateway.
 status: Int?               |   &#10003;        |   Use to indicate payment status “1” – Success OR “0” – Fail
 errDesc: String?           |                   |   Payment status description. Please refer to [Appendix I (3. Error Description)](#3-error-description)
@@ -263,7 +263,7 @@ IPay88SDK.shared.checkout(currentViewController: self, payRequest: payRequest, d
 + If the Merchant request is successful the response message will contain as SHA1 hashed signature. 
 + The hash signature for the response is a hash of the following fields:
     ```
-    1. MerchantKey (Provided by iPay88 and share between iPay88 and merchant only)
+    1. MerchantKey (Provided by IPay88 and share between IPay88 and merchant only)
     2. MerchantCode
     3. PaymentId
     4. RefNo
@@ -292,6 +292,82 @@ IPay88SDK.shared.checkout(currentViewController: self, payRequest: payRequest, d
     KiCecyU86ZOFk15jXwOAvHdw/1M=
     ```
 + Test URL: <a href="https://payment.ipay88.com.kh/epayment/testing/TestSignature_response.asp" target="_blank">https://payment.ipay88.com.kh/epayment/testing/TestSignature_response.asp</a>
+
+
+## 6. Backend Post Feature
+The Backend POST feature is server to server technology. It does not depend on the `IPay88Sdk's Payment Screen` to return payment response data to `Merchant App`. With this feature implemented, your system still can get the payment status on the backend (asynchronously) even if the `IPay88Sdk's Payment Screen` fails to get status from IPay88 System which may be due to a closed `IPay88Sdk's Payment Screen`, internet connection timeout and etc.
+
+### 1. Prerequisite
+
+-  This Backend post feature will ONLY return status if the transaction is a payment `success`. No status will return if the payment is `failed`.
+- The Backend page should implement checking on some fields such as `Signature` (Please refer to [5. Signature Response](#5-signature-response)) and `Amount` to prevent user hijack merchant system.
+- The backend page should not have session related code so that merchant systems are still able accept payment status from IPay88 System even if the user is logged out or the session is expired.
+- You need to implement a check to determine "backend page" to update the order so it won't update order status in merchant system more than 1 time.
+- After receiving the payment success status, IPay88 OPSG will simultaneously return payment status to the SDK's Callback and "backend page".
+
+### 2. Implementation
+On the merchant website, create a page to accept backend post response parameters from IPay88 System.
+
+The Backend Post response parameters are same like [3.2.2 Payment Response Properties](#312-payment-request-properties) but use the Capitalization (Eg. `merchantCode` -> `MerchantCode`).
+
+- Step1. Specify your "backend page" in [3.1.2 Payment Request Properties](#312-payment-request-properties) on field named `backendURL`.
+- Step2. On your "backend page" you have to write out the word `RECEIVEOK` as an acknowledgement when you get the payment success status from IPay88 System. And IPay88 System will re-try send the payment status to the "backend page" up to 3 times on different interval if no `RECEIVEOK` acknowledgement detected.
+
+    Note: 
+    > Make sure just the word `RECEIVEOK` only on your "backend page" without any HTML tag on the page.
+
+Sample Code
+
+ASP Classic
+```vbScript
+<%
+    MerchantCode    = Request.Form("MerchantCode")
+    PaymentId       = Request.Form("PaymentId")
+    RefNo           = Request.Form("RefNo")
+    Amount          = Request.Form("Amount")
+    eCurrency       = Request.Form("Currency")
+    Remark          = Request.Form("Remark")
+    TransId         = Request.Form("TransId")
+    AuthCode        = Request.Form("AuthCode")
+    eStatus         = Request.Form("Status")
+    ErrDesc         = Request.Form("ErrDesc")
+    Signature       = Request.Form("Signature")
+
+    If eStatus = 1 Then
+        ' COMPARE Return Signature with Generated Response Signature 
+        ' And Update order to PAID
+        response.write "RECEIVEOK"
+    Else
+        ' Update order to FAIL
+    End If
+%>
+```
+
+PHP
+```php
+<?php
+    $merchantcode   = $_REQUEST["MerchantCode"];
+    $paymentid      = $_REQUEST["PaymentId"];
+    $refno          = $_REQUEST["RefNo"];
+    $amount         = $_REQUEST["Amount"];
+    $ecurrency      = $_REQUEST["Currency"];
+    $remark         = $_REQUEST["Remark"];
+    $transid        = $_REQUEST["TransId"];
+    $authcode       = $_REQUEST["AuthCode"];
+    $estatus        = $_REQUEST["Status"];
+    $errdesc        = $_REQUEST["ErrDesc"];
+    $signature      = $_REQUEST["Signature"];
+
+    if ($estatus == 1) {
+        // COMPARE Return Signature with Generated Response Signature 
+        // And Update order to PAID
+        echo "RECEIVEOK";
+    }
+    else {
+        // update order to FAIL }
+    }
+?>
+```
 
 
 ## Appendix I
@@ -329,9 +405,9 @@ Message                     |  Description
 -------------               | -------------
 Duplicate reference number  |   Reference number must be unique for each transaction.
 Invalid merchant            |   The merchant code does not exist.
-Invalid parameters          |   Some parameter posted to iPay88 is invalid or empty.
+Invalid parameters          |   Some parameter posted to IPay88 is invalid or empty.
 Overlimit per transaction   |   You exceed the amount value per transaction.
-Payment not allowed         |   The Payment method you requested is not allowed for this merchant code, please contact iPay88 Support to verify what payment method available for the merchant account.
-Permission not allow        |   Your AppId or the shared credentials is not match with the information registered in iPay88 merchant account. Please contact IPay88 team.
+Payment not allowed         |   The Payment method you requested is not allowed for this merchant code, please contact IPay88 Support to verify what payment method available for the merchant account.
+Permission not allow        |   Your AppId or the shared credentials is not match with the information registered in IPay88 merchant account. Please contact IPay88 team.
 ### 4. Demo
 [IPAY88SDK-Demo](https://testflight.apple.com/join/82WBr9P1)
