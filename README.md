@@ -316,8 +316,7 @@ The Backend Post response parameters are same like [3.2.2 Payment Response Prope
     Note: 
     > Make sure just the word `RECEIVEOK` only on your "backend page" without any HTML tag on the page.
 
-Sample Code
-
+### 3. Sample Code
 ASP Classic
 ```vbScript
 <%
