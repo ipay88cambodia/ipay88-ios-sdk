@@ -6,20 +6,20 @@ We accept online payments from various methods, such as:
 * [Appendix I (1. PaymentId)](#1-paymentid)
 * [Demo App](https://testflight.apple.com/join/82WBr9P1)
 
-# IPay88 SDK for iOS
+## IPay88 SDK for iOS
 [//]: <> (https://img.shields.io/badge/pod-v1.0.0-blue)
 [![](https://img.shields.io/cocoapods/v/IPay88Sdk)](https://img.shields.io/cocoapods/v/IPay88Sdk)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange)
 
-## SDK Payment Flow
+### SDK Payment Flow
 1. Your application initializes the library.
 2. After buyers complete their payments, the library returns a delegate to your application with the status of the payment and the transaction id.
 3. After the library flow is complete, a delegate result will be posted to be received by your application.
 
 
-# Table of Contents
-## 1. Requirements
+## Table of Contents
+### 1. Requirements
 1. Please share your App Information to IPay88 team:
     - AppId (App Bundle Identifier)
       - Inside Xcode, Select `Your Project` > TARGETS `Your Target App` > Inside Tab `General` > `Identity` > Bundle Identifier `xxx.xxx.xxx`
@@ -32,9 +32,9 @@ We accept online payments from various methods, such as:
     - ClientAppSecret (IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx). Please refer to [2.2 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist](#22-setup-clientappsecret-and-cfbundleurlschemes-inside-infoplist)
 
 
-## 2. Setup
-### 2.1 Dependencies
-#### CocoaPods
+### 2. Setup
+#### 2.1 Dependencies
+##### CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `IPay88Sdk` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -42,7 +42,7 @@ We accept online payments from various methods, such as:
 pod 'IPay88Sdk', '1.0.0-SNAPSHOT'
 ```
 
-#### Carthage
+##### Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate `IPay88Sdk` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
@@ -50,19 +50,19 @@ pod 'IPay88Sdk', '1.0.0-SNAPSHOT'
 github "IPay88Cambodia/IPay88-iOS-Sdk" "1.0.0-SNAPSHOT"
 ```
 
-#### Swift Package Manager
+##### Swift Package Manager
 [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
 
 Once you have your Swift package set up, adding `IPay88Sdk` as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
-##### - Via `Package.swift`
+###### - Via `Package.swift`
 ```swift
 dependencies: [
     .package(url: "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", .exact(Version("1.0.0-SNAPSHOT")))
 ]
 ```
 
-##### - Via `Xcode's UI`
+###### - Via `Xcode's UI`
 - Step 1. Inside Xcode, Goto File > Add Packages...
 - Step 2. An Alert Dialog appears > Inside the Search box at the top-right of the alert windows
   + Copy this URL and paste:
@@ -73,13 +73,13 @@ dependencies: [
   + Dependency Rule: `Exact Version` > Enter the version number `1.0.0-SNAPSHOT`
   + Add to Project: `Your Project Name`
 
-##### * Note: How To Hard Reset Swift Package
+###### * Note: How To Hard Reset Swift Package
 - Step1. Navigate to `~/Library/Caches/org.swift.swiftpm/repositories` and deleting the folder and lock file related to the package
 - Step2. Then, in Xcode, Goto `File` > `Swift Packages` > `Reset Package Caches`
 - Done.
 
 
-### 2.2 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist
+#### 2.2 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -101,7 +101,7 @@ dependencies: [
 </plist>
 ```
 
-### 2.3 Connect Your App Delegate
+#### 2.3 Connect Your App Delegate
 Replace the code in `AppDelegate.swift` method with the following code. This code initializes the SDK when your app launches, and allows the SDK handle URL Scheme (Deeplink).
 ```swift
 // AppDelegate.swift
@@ -153,14 +153,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 ```
 
 
-
-## 3. Payment Request & Response
-### 3.1 Payment Request
-#### 3.1.1 Payment Request Object
+### 3. Payment Request & Response
+#### 3.1 Payment Request
+##### 3.1.1 Payment Request Object
 ```swift
 class IPay88PayRequest
 ```
-#### 3.1.2 Payment Request Properties
+##### 3.1.2 Payment Request Properties
 Property Name              |  Required         |   Description
 -------------              | :---------------: | -------------
 environment: Environment   |                   |   Swtich between SANDBOX (default) & PRODUCION environment. Please refer to [3.1.3 Environment](#313-environment)
@@ -176,14 +175,14 @@ userEmail: String          |   &#10003;        |   Customer email address in mer
 userContact: String        |   &#10003;        |   Customer contact number in merchant's system, E.g. 60123436789
 remark: String?            |                   |   Remark for particular transaction. Note: Special characters is not allowed.
 backendURL: String?        |                   |   Specify a valid merchant callback URL when payment success (Please refer to [6. Backend Post Feature](#6-backend-post-feature)). E.g. http://www.myshop.com/backend_page.php
-#### 3.1.3 Environment
+##### 3.1.3 Environment
 ```swift
 public enum Environment {
     case SANDBOX
     case PRODUCTION
 }
 ```
-#### 3.1.4 Currency
+##### 3.1.4 Currency
 ```swift
 public enum Currency {
     case KHR
@@ -191,12 +190,12 @@ public enum Currency {
 }
 ```
 
-### 3.2 Payment Response
-#### 3.2.1 Payment Response Object
+#### 3.2 Payment Response
+##### 3.2.1 Payment Response Object
 ```swift
 class IPay88PayResponse
 ```
-#### 3.2.2 Payment Response Properties
+##### 3.2.2 Payment Response Properties
 Property Name                |  Required         |   Description
 -------------              | :---------------: | -------------
 merchantCode: String?      |   &#10003;        |   Merchant Code provided by IPay88 and use to uniquely identify the Merchant. E.g. KH00001
@@ -212,8 +211,8 @@ errDesc: String?           |                   |   Payment status description. P
 signature: String?         |   &#10003;        |   SHA1 signature. Please refer to [5. Signature Response](#5-signature-response)
 
 
-## 4. How to Make Payment
-### 4.1 Create Payment Request Object
+### 4. How to Make Payment
+#### 4.1 Create Payment Request Object
 ```swift
 // MARK: - Step1. Import SDK to your ViewController
 import IPay88Sdk
@@ -235,7 +234,7 @@ payRequest.remark = nil
 payRequest.backendURL = "http://www.myshop.com/backend_page.php"
 ```
 
-### 4.2 Create Payment Delegate
+#### 4.2 Create Payment Delegate
 + Your ViewController should adopt to `IPay88Delegate`:
 ```swift
 // MARK: - Step3. Implement IPay88Delegate to Get Payment Status
@@ -252,14 +251,14 @@ extension YourViewController: : IPay88Delegate {
 }
 ```
 
-### 4.3 Invoke Checkout Function
+#### 4.3 Invoke Checkout Function
 ```swift
 // MARK: - Step4. Checkout
 IPay88SDK.shared.checkout(currentViewController: self, payRequest: payRequest, delegate: self)
 ```
 
 
-## 5. Signature Response
+### 5. Signature Response
 + If the Merchant request is successful the response message will contain as SHA1 hashed signature. 
 + The hash signature for the response is a hash of the following fields:
     ```
@@ -294,10 +293,10 @@ IPay88SDK.shared.checkout(currentViewController: self, payRequest: payRequest, d
 + Test URL: <a href="https://payment.ipay88.com.kh/epayment/testing/TestSignature_response.asp" target="_blank">https://payment.ipay88.com.kh/epayment/testing/TestSignature_response.asp</a>
 
 
-## 6. Backend Post Feature
+### 6. Backend Post Feature
 The Backend POST feature is server to server technology. It does not depend on the `IPay88Sdk's Payment Screen` to return payment response data to `Merchant App`. With this feature implemented, your system still can get the payment status on the backend (asynchronously) even if the `IPay88Sdk's Payment Screen` fails to get status from IPay88 System which may be due to a closed `IPay88Sdk's Payment Screen`, internet connection timeout and etc.
 
-### 1. Prerequisite
+#### 1. Prerequisite
 
 -  This Backend post feature will ONLY return status if the transaction is a payment `success`. No status will return if the payment is `failed`.
 - The Backend page should implement checking on some fields such as `Signature` (Please refer to [5. Signature Response](#5-signature-response)) and `Amount` to prevent user hijack merchant system.
@@ -305,7 +304,7 @@ The Backend POST feature is server to server technology. It does not depend on t
 - You need to implement a check to determine "backend page" to update the order so it won't update order status in merchant system more than 1 time.
 - After receiving the payment success status, IPay88 OPSG will simultaneously return payment status to the SDK's Callback and "backend page".
 
-### 2. Implementation
+#### 2. Implementation
 On the merchant website, create a page to accept backend post response parameters from IPay88 System.
 
 The Backend Post response parameters are same like [3.2.2 Payment Response Properties](#312-payment-request-properties) but use the Capitalization (Eg. `merchantCode` -> `MerchantCode`).
@@ -316,7 +315,7 @@ The Backend Post response parameters are same like [3.2.2 Payment Response Prope
     Note: 
     > Make sure just the word `RECEIVEOK` only on your "backend page" without any HTML tag on the page.
 
-### 3. Sample Code
+#### 3. Sample Code
 ASP Classic
 ```vbScript
 <%
@@ -369,15 +368,16 @@ PHP
 ```
 
 
-## Appendix I
-### 1. PaymentId
+### Appendix I
+#### 1. PaymentId
 + Set PaymentId = 0, it will show all registered payment methods to the customer.
-#### 1.1 Credit & Debit Card
+##### 1.1 Credit & Debit Card
 Payment Method Name |  PaymentId (USD)| Logo
 -------------       | :-------------: | :-------------:
 Credit Card         |   1             |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/CC.svg" />
 UnionPay            |   15            |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/MPGS_UPI.svg" />
-#### 1.2 eWallet
+
+##### 1.2 eWallet
 Payment Method Name |  PaymentId (USD)|  PaymentId (KHR)| Logo
 -------------       | :-------------: | :-------------: | :-------------:
 eMoney              |   9             |     10          |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/EW_EMONEY.svg" />
@@ -386,7 +386,8 @@ Alipay              |   233           |                 |   <img width="35" src=
 Wing                |   235           |     236         |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/EW_ONLINEEWING.svg" />
 WeChat Pay          |   240           |                 |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/QR_WECHAT.svg" />
 KHQR                |   248           |     249         |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/QR_KHQR.svg" />
-#### 1.3 Online Banking
+
+##### 1.3 Online Banking
 Payment Method Name |  PaymentId (USD)|  PaymentId (KHR)| Logo
 -------------       | :-------------: | :-------------: | :-------------:
 Acleda XPAY         |   3             |     4           |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/OB_ACLEDAXPAY.svg" />
@@ -394,12 +395,14 @@ Chip Mong Pay       |   238           |     239         |   <img width="35" src=
 Campu Direct Debit  |   242           |     243         |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/OB_CAMPUDIRECTDEBIT.svg" />
 AMK Online Card     |   246           |     247         |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/OB_AMKCARD.svg" />
 Prince Bank QR      |   251           |     252         |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/QR_PRINCE_BANK.svg" />
-### 2. Currency
+
+#### 2. Currency
 Currency Code   |  Description
 -------------   | -------------
 KHR             | Cambodia Riel
 USD             | US Dollar
-### 3. Error Description
+
+#### 3. Error Description
 Message                     |  Description
 -------------               | -------------
 Duplicate reference number  |   Reference number must be unique for each transaction.
@@ -408,5 +411,6 @@ Invalid parameters          |   Some parameter posted to IPay88 is invalid or em
 Overlimit per transaction   |   You exceed the amount value per transaction.
 Payment not allowed         |   The Payment method you requested is not allowed for this merchant code, please contact IPay88 Support to verify what payment method available for the merchant account.
 Permission not allow        |   Your AppId or the shared credentials is not match with the information registered in IPay88 merchant account. Please contact IPay88 team.
-### 4. Demo
+
+#### 4. Demo
 [IPAY88SDK-Demo](https://testflight.apple.com/join/82WBr9P1)
