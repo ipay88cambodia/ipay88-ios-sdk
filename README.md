@@ -298,7 +298,7 @@ The Backend POST feature is server to server technology. It does not depend on t
 
 #### 1. Prerequisite
 
--  This Backend post feature will ONLY return status if the transaction is a payment `success`. No status will return if the payment is `failed`.
+- This Backend post feature will ONLY return status if the transaction is a payment `success`. No status will return if the payment is `failed`.
 - The Backend page should implement checking on some fields such as `Signature` (Please refer to [5. Signature Response](#5-signature-response)) and `Amount` to prevent user hijack merchant system.
 - The backend page should not have session related code so that merchant systems are still able accept payment status from IPay88 System even if the user is logged out or the session is expired.
 - You need to implement a check to determine "backend page" to update the order so it won't update order status in merchant system more than 1 time.
@@ -307,7 +307,7 @@ The Backend POST feature is server to server technology. It does not depend on t
 #### 2. Implementation
 On the merchant website, create a page to accept backend post response parameters from IPay88 System.
 
-The Backend Post response parameters are same like [3.2.2 Payment Response Properties](#312-payment-request-properties) but use the Capitalization (Eg. `merchantCode` -> `MerchantCode`).
+The Backend Post response parameters are same like [3.2.2 Payment Response Properties](#322-payment-response-properties) but use the Capitalization (Eg. `merchantCode` -> `MerchantCode`).
 
 - Step1. Specify your "backend page" in [3.1.2 Payment Request Properties](#312-payment-request-properties) on field named `backendURL`.
 - Step2. On your "backend page" you have to write out the word `RECEIVEOK` as an acknowledgement when you get the payment success status from IPay88 System. And IPay88 System will re-try send the payment status to the "backend page" up to 3 times on different interval if no `RECEIVEOK` acknowledgement detected.
