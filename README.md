@@ -4,7 +4,7 @@ We accept online payments from various methods, such as:
 * e-Wallets (KHQR, Wing, PiPay, eMoney, Alipay, WeChat Pay, etc.)
 * Online Banking (ACLEDA XPay, CAMPU Direct Debit, Chip Mong Pay, AMK Online Card, Prince Bank QR, etc.)
 * [Appendix I (1. PaymentId)](#1-paymentid)
-* [Demo App](https://testflight.apple.com/join/82WBr9P1)
+* Download Demo App from [here](https://testflight.apple.com/join/82WBr9P1)
 
 ## IPay88 SDK for iOS
 [//]: <> (https://img.shields.io/badge/pod-v1.0.0-blue)
@@ -20,7 +20,7 @@ We accept online payments from various methods, such as:
 
 ## Table of Contents
 ### 1. Requirements
-1. Please share your App Information to IPay88 team:
+1. Please share your App Information to IPay88 team or submit this form [Mobile App Information](https://forms.gle/HZNb8JokStT3HFRe7):
     - AppId (App Bundle Identifier)
       - Inside Xcode, Select `Your Project` > TARGETS `Your Target App` > Inside Tab `General` > `Identity` > Bundle Identifier `xxx.xxx.xxx`
     - App Name (Optional)
@@ -30,6 +30,7 @@ We accept online payments from various methods, such as:
     - Merchant Code (KHxxxxxx)
     - Merchant Key  (XXxxxxxx)
     - ClientAppSecret (IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx). Please refer to [2.2 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist](#22-setup-clientappsecret-and-cfbundleurlschemes-inside-infoplist)
+    - WeChat Pay AppId (wxxxxxxxxxxxxxxxxx) (Optional). Please refer to [1. WeChat In-App Payment Configuration](#1-wechat-in-app-payment-configuration)
 
 
 ### 2. Setup
@@ -39,7 +40,7 @@ We accept online payments from various methods, such as:
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `IPay88Sdk` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'IPay88Sdk', '1.0.0-SNAPSHOT'
+pod 'IPay88Sdk', '1.0.1-SNAPSHOT'
 ```
 
 ##### Carthage
@@ -47,7 +48,7 @@ pod 'IPay88Sdk', '1.0.0-SNAPSHOT'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate `IPay88Sdk` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ruby
-github "IPay88Cambodia/IPay88-iOS-Sdk" "1.0.0-SNAPSHOT"
+github "IPay88Cambodia/IPay88-iOS-Sdk" "1.0.1-SNAPSHOT"
 ```
 
 ##### Swift Package Manager
@@ -58,7 +59,7 @@ Once you have your Swift package set up, adding `IPay88Sdk` as a dependency is a
 ###### - Via `Package.swift`
 ```swift
 dependencies: [
-    .package(url: "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", .exact(Version("1.0.0-SNAPSHOT")))
+    .package(url: "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", .exact(Version("1.0.1-SNAPSHOT")))
 ]
 ```
 
@@ -70,7 +71,7 @@ dependencies: [
     https://github.com/ipay88cambodia/ipay88-ios-sdk.git
     ```
 - Step 3. In the search result  > Select `ipay88-ios-sdk`
-  + Dependency Rule: `Exact Version` > Enter the version number `1.0.0-SNAPSHOT`
+  + Dependency Rule: `Exact Version` > Enter the version number `1.0.1-SNAPSHOT`
   + Add to Project: `Your Project Name`
 
 ###### * Note: How To Hard Reset Swift Package
@@ -79,7 +80,7 @@ dependencies: [
 - Done.
 
 
-#### 2.2 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist
+#### 2.2 Setup ClientAppSecret and CFBundleURLSchemes inside `Info.plist`
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -412,5 +413,34 @@ Overlimit per transaction   |   You exceed the amount value per transaction.
 Payment not allowed         |   The Payment method you requested is not allowed for this merchant code, please contact IPay88 Support to verify what payment method available for the merchant account.
 Permission not allow        |   Your AppId or the shared credentials is not match with the information registered in IPay88 merchant account. Please contact IPay88 team.
 
-#### 4. Demo
-[IPAY88SDK-Demo](https://testflight.apple.com/join/82WBr9P1)
+
+### SDK Version Updates
+#### Version >= 1.0.1
+##### 1. WeChat In-App Payment Configuration
+- Add below code to your `Info.plist`, and set the value of Wechat Pay AppId which you received from IPay88 Team.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>kh.com.ipay88.sdk.WxPayAppId</key>
+    <string>wxxxxxxxxxxxxxxxxx</string>
+
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>wxxxxxxxxxxxxxxxxx</string>
+            </array>
+        </dict>
+    </array>
+
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>weixin</string>
+        <string>weixinULAPI</string>
+    </array>
+</dict>
+</plist>
+```

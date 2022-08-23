@@ -6,39 +6,55 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		X0YETEo95kaPKkvBl1Mb+lt6JqE=
+		OHgmhL6HTB2FE6GNM9iIyoTBAgo=
 		</data>
 		<key>Headers/IPay88Sdk-Swift.h</key>
 		<data>
-		wFL903dXFXCUnXu98bCUCiLZOBA=
+		tggFYT+0sX11tHVNjBkkHoKx3jY=
 		</data>
 		<key>Headers/IPay88Sdk.h</key>
 		<data>
-		CVzAJurjdrld8ZDlqzXRjaaEC3Q=
+		uqebK2U+nDcFTfopsj23yiBW0Pw=
+		</data>
+		<key>Headers/WXApi.h</key>
+		<data>
+		X2ZgvOm6+0JcN/YIgdcu85rHHNE=
+		</data>
+		<key>Headers/WXApiObject.h</key>
+		<data>
+		5nm1inINg7V624P/P0mtHjt3fTA=
+		</data>
+		<key>Headers/WechatAuthSDK.h</key>
+		<data>
+		6beFSxsQAVAU2YA49kPcCypShO0=
 		</data>
 		<key>IPay88ViewController.nib</key>
 		<data>
-		1oIJUTJhyx4Suv4ZcGueVmmJ9Lw=
+		PFbYbtPonb9LE9h01bEHsVMGPEc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+FRJZygsUwvXrUYpX8fW35BhCyU=
+		UFiSAAOdrPslna16if8B5fbfV0A=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		zZJ8SrE3Sq3wVU0d1XU7XKyxCzY=
+		oNAC3rTa/EBdqV6m/r7DbWlmlfM=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		T784abgMVhRmb/nXahIamsnfJHU=
+		h8svXArgLIv8FKEQ91RJ84E1nTM=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		8b07J63Ht5xj4ULPlixbMkVH5ng=
+		6T2277ouraMM4SGEhPp1dDOExN8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		Xyesv3CR87yop5aI/SHV+ZEkVco=
+		</data>
+		<key>README.txt</key>
+		<data>
+		t5TLJCVkq9gdHroEZum7bwvCtQU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -47,49 +63,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			awyfeyTSOOiw+RB8uAFjjX8zcsCaencRTl3i2fY4m+E=
+			UB9HDkrQ2f1viUegK3Bc/lIt6AcH4rJjAloYfnqFWQc=
 			</data>
 		</dict>
 		<key>Headers/IPay88Sdk-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aldK66VH+0LSgbU4Kpu06sGkydzKs7KIQvDmZKF9oZg=
+			B2NGRl6vgoX8cGkgW9oxSZmY+RDnVzt1mTDoRBQ2HdY=
 			</data>
 		</dict>
 		<key>Headers/IPay88Sdk.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HUdovupoCS8uzSStgVB+35gY52/sAqx1fpWLIGaaDNc=
+			1xA3vXjliWfx7choYwkKmgC4zjgQgDnRk7YiI9wtZUY=
+			</data>
+		</dict>
+		<key>Headers/WXApi.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vi2suYHu8h8oSkiu5n76u+V0ypUk+iy8GSPauRIGG58=
+			</data>
+		</dict>
+		<key>Headers/WXApiObject.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nHp1MXfpkNUe3AFP7MDjnvVO2xGbu5ZLy4IOh6L/HH4=
+			</data>
+		</dict>
+		<key>Headers/WechatAuthSDK.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eX6ctZW1kLlhw/hTNNWOJPj0BpgwHGwje4CjdGBKA+c=
 			</data>
 		</dict>
 		<key>IPay88ViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qBfwFKmgZWu+Nk/vd0bGezWHMJn6nkqVHCADMsekiZo=
+			YEmPesxThOqysmi692hEdyN4i2FVnR8JHoYrb/2ef0g=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0OIIDpY9HcnH/KSr86led9NPPnY4a8uPWHnDn3gmf4M=
+			CI0GAuAL32m8h2W2aeZhWNqhsVgzD5be7ThtbUmiMqE=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Gw60bHicR9YnGBn/zag//TtbDLfvjXY23IjghMGYZjY=
+			/xZA/9m+6cB3NbylNRHIwoxgY8n46sEPIEXQ0bwyM1Q=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CRCRCOYNcpE/JiwCgjAgqAkztHJ8QRHuCRdQ0NqCKFw=
+			J53B9BbAD1CSArICRI4UDveCdCo/DSk781q5MavX1iE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -97,6 +134,13 @@
 			<key>hash2</key>
 			<data>
 			D6jUe9qGRQDCJVi2t7isQuh0SWYow4zuVb8VvR56MyM=
+			</data>
+		</dict>
+		<key>README.txt</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LG9FW6QOxQ0SqLuac33oylfYOp/xsY1euo90jxhXGPY=
 			</data>
 		</dict>
 	</dict>

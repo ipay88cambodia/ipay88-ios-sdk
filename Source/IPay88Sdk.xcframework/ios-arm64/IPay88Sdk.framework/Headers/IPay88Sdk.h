@@ -16,5 +16,6 @@ FOUNDATION_EXPORT double IPay88SdkVersionNumber;
 FOUNDATION_EXPORT const unsigned char IPay88SdkVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <IPay88Sdk/PublicHeader.h>
-
-
+#import <IPay88Sdk/WXApi.h>
+#import <IPay88Sdk/WXApiObject.h>
+#import <IPay88Sdk/WechatAuthSDK.h>

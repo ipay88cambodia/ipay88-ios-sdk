@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name IPay88Sdk
 import CommonCrypto
 import Foundation
@@ -145,6 +145,17 @@ public protocol IPay88Delegate : ObjectiveC.NSObjectProtocol {
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
+extension UIKit.UIApplication {
+  public enum IPay88AppConfig : Swift.String {
+    case AppSecret
+    case WxPayAppId
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
 @_hasMissingDesignatedInitializers public class IPay88AppDelegate {
   public static let shared: IPay88Sdk.IPay88AppDelegate
   public func application(_ application: UIKit.UIApplication, didFinishLaunchingWithOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
@@ -216,6 +227,9 @@ public protocol IPay88Delegate : ObjectiveC.NSObjectProtocol {
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
+extension UIKit.UIApplication.IPay88AppConfig : Swift.Equatable {}
+extension UIKit.UIApplication.IPay88AppConfig : Swift.Hashable {}
+extension UIKit.UIApplication.IPay88AppConfig : Swift.RawRepresentable {}
 extension IPay88Sdk.IPay88PayRequest.Environment : Swift.Equatable {}
 extension IPay88Sdk.IPay88PayRequest.Environment : Swift.Hashable {}
 extension IPay88Sdk.IPay88PayRequest.Environment : Swift.RawRepresentable {}
