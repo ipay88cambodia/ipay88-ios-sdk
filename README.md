@@ -163,7 +163,7 @@ class IPay88PayRequest
 ##### 3.1.2 Payment Request Properties
 Property Name              |  Required         |   Description
 -------------              | :---------------: | -------------
-environment: Environment   |                   |   Swtich between SANDBOX (default) & PRODUCION environment. Please refer to [3.1.3 Environment](#313-environment)
+environment: Environment   |                   |   Swtich between SANDBOX (default) & PRODUCTION environment. Please refer to [3.1.3 Environment](#313-environment)
 merchantCode: String       |   &#10003;        |   Merchant Code that provided by IPay88, E.g. KH00001
 merchantKey: String        |   &#10003;        |   Merchant Key that provided by IPay88.
 paymentId: Int             |   &#10003;        |   PaymentId is the value to request payment method to appear on IPay88 landing page. Please refer to [Appendix I (1. PaymentId)](#1-paymentid)
