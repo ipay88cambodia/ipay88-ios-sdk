@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 	spec.name         = "IPay88Sdk"
-	spec.version      = "2.0.0"
+	spec.version      = "2.0.0-SNAPSHOT"
 	spec.summary      = "IPay88 SDK for iOS"
 	spec.description  = <<-DESC
 		IPAY88 (Cambodia) Plc.
