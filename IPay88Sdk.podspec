@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
 	spec.source       = { :git => "https://github.com/ipay88cambodia/ipay88-ios-sdk.git", :branch => "main", :tag => "#{spec.version}" }
 	
 	# Published binaries
-	spec.ios.deployment_target   = "11.0"
+	spec.ios.deployment_target   = "12.0"
 	spec.ios.vendored_frameworks = "Source/IPay88Sdk.xcframework"
 	
 	# Add-Ons for Static Libs *.a (not build for iOS Simulator) which IPay88Sdk used

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		KCrve33GnUigKJznMuWGnvjeuOU=
+		6jyyyKPTINhbZCVhdX3Mm6iwW4Q=
 		</data>
 		<key>Headers/IPay88Sdk-Swift.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		kMrI+/hCFiGnzgVbjOew96yE/Hg=
+		1bDbKqjSS6iRt6PueY+1vpLclBI=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		BUFJYXKXyfuf7KuOnd3f3PxcMv4=
+		LFK+M8JYsgNn0PqDifdFJCQxuaw=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		iFgte7WcEaSdyfUSE5jK8diAo/Y=
+		gvqzAocEAE2WpDqVNq3jrgLZkb4=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		BUFJYXKXyfuf7KuOnd3f3PxcMv4=
+		LFK+M8JYsgNn0PqDifdFJCQxuaw=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3+XwF6UIch9+7EFCS2B9pbOC15s=
+		tJKAZUVGPvS5GFhfOJqkSbzfI6U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Eg0Bp/WoRzA8ceQYkuCADt0UoMK2E4z11VaH5XSGokk=
+			aT11G+f6/BFFTaMvwZyXeFhH1fiaoNsLMAvB5LoRQ7c=
 			</data>
 		</dict>
 		<key>Headers/IPay88Sdk-Swift.h</key>
@@ -127,28 +127,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jpwzwaJ72fd1NBy5eMRd2UwRJp3BTLQiRdVGdFNHG4k=
+			KIYMwwmjTB69YfpoltGMxzcIAnD17ObsyvjZW8S+kzs=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I9IA/jaejMdIzVDEw5x/qnnvG0rY37dakOkc9PKPmZM=
+			2vPRxqh1HvoefB6WYGWH0F9zrZCk6HJT98CIspvvkDk=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jpwzwaJ72fd1NBy5eMRd2UwRJp3BTLQiRdVGdFNHG4k=
+			KIYMwwmjTB69YfpoltGMxzcIAnD17ObsyvjZW8S+kzs=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bKIPBV8eCxoGTVvybMyazo7fefB1utELo/zQqPsTy6M=
+			uegKw6hAj/aZIYsJOgWNjGBFjZBcHKkofQ0R+fWzDPI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
