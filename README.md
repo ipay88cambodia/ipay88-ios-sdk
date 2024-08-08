@@ -1,10 +1,10 @@
 # IPay88 (Cambodia) Plc.
 We accept online payments from various methods, such as:
-* Credit or Debit cards (Visa, Mastercards, JCB, Diners Club & UnionPay, etc.)
+* Credit or Debit cards (Visa, Mastercard, JCB, Diners Club & UnionPay, etc.)
 * e-Wallets (KHQR, Wing, PiPay, eMoney, Alipay, WeChat Pay, etc.)
-* Online Banking (ACLEDA XPay, CAMPU Direct Debit, Chip Mong Pay, AMK Online Card, Prince Bank QR, etc.)
+* Online Banking (ACLEDA XPay, CAMPU Direct Debit, Chip Mong Pay, AMK Online Card, etc.)
 * [Appendix I (1. PaymentId)](#1-paymentid)
-* Download Demo App from [here](https://testflight.apple.com/join/82WBr9P1)
+* Download the Demo App from [here](https://testflight.apple.com/join/82WBr9P1)
 
 ## IPay88 SDK for iOS
 [//]: <> (https://img.shields.io/badge/pod-v1.0.0-blue)
@@ -14,19 +14,19 @@ We accept online payments from various methods, such as:
 
 ### SDK Payment Flow
 1. Your application initializes the library.
-2. After buyers complete their payments, the library returns a delegate to your application with the status of the payment and the transaction id.
+2. After buyers complete their payments, the library returns a delegate to your application with the status of the payment and the transaction ID.
 3. After the library flow is complete, a delegate result will be posted to be received by your application.
 
 
 ## Table of Contents
 ### 1. Requirements
-1. Please share your App Information to IPay88 team or submit this form [Mobile App Information](https://forms.gle/HZNb8JokStT3HFRe7):
+1. Please share your App Information with the IPay88 team or submit this form [Mobile App Information](https://forms.gle/HZNb8JokStT3HFRe7):
     - AppId (App Bundle Identifier)
       - Inside Xcode, Select `Your Project` > TARGETS `Your Target App` > Inside Tab `General` > `Identity` > Bundle Identifier `xxx.xxx.xxx`
     - App Name (Optional)
       - For showing on the return button on some banks app. Eg: `RETURN TO LEGEND CINEMA`
-2. Then IPay88 team will setup your App Information into IPay88 system to allow you to use IPay88 Mobile Payment channel. 
-3. And then IPay88 team will share you these credentials:
+2. Then IPay88 team will set up your App Information in the IPay88 system to allow you to use the IPay88 Mobile Payment channel. 
+3. And then IPay88 team will share these credentials:
     - Merchant Code (KHxxxxxx)
     - Merchant Key  (XXxxxxxx)
     - ClientAppSecret (IPAY88-xxxxxxxxxxxxxxxxxxxxxxxxx). Please refer to [2.2 Setup ClientAppSecret and CFBundleURLSchemes inside Info.plist](#22-setup-clientappsecret-and-cfbundleurlschemes-inside-infoplist)
@@ -35,6 +35,10 @@ We accept online payments from various methods, such as:
 
 ### 2. Setup
 #### 2.1 Dependencies
+##### What's the `-SNAPSHOT` version?
+- It's working fine with the Partner Bank's UAT Environment which has an invalid SSL Certificate.
+- Do not use the `-SNAPSHOT` version for your Production App.
+
 ##### CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `IPay88Sdk` into your Xcode project using CocoaPods, specify it in your `Podfile`:
@@ -52,7 +56,8 @@ github "IPay88Cambodia/IPay88-iOS-Sdk" "1.0.1-SNAPSHOT"
 ```
 
 ##### Swift Package Manager
-[Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
+
+[Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the Swift compiler.
 
 Once you have your Swift package set up, adding `IPay88Sdk` as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
@@ -66,7 +71,7 @@ dependencies: [
 ###### - Via `Xcode's UI`
 - Step 1. Inside Xcode, Goto File > Add Packages...
 - Step 2. An Alert Dialog appears > Inside the Search box at the top-right of the alert windows
-  + Copy this URL and paste:
+  + Copy this URL and paste it:
     ```
     https://github.com/ipay88cambodia/ipay88-ios-sdk.git
     ```
@@ -75,7 +80,7 @@ dependencies: [
   + Add to Project: `Your Project Name`
 
 ###### * Note: How To Hard Reset Swift Package
-- Step1. Navigate to `~/Library/Caches/org.swift.swiftpm/repositories` and deleting the folder and lock file related to the package
+- Step1. Navigate to `~/Library/Caches/org.swift.swiftpm/repositories` and delete the folder and lock file related to the package
 - Step2. Then, in Xcode, Goto `File` > `Swift Packages` > `Reset Package Caches`
 - Done.
 
@@ -260,7 +265,7 @@ IPay88SDK.shared.checkout(currentViewController: self, payRequest: payRequest, d
 
 
 ### 5. Signature Response
-+ If the Merchant request is successful the response message will contain as SHA1 hashed signature. 
++ If the Merchant request is successful the response message will contain SHA1 hashed signature. 
 + The hash signature for the response is a hash of the following fields:
     ```
     1. MerchantKey (Provided by IPay88 and share between IPay88 and merchant only)
@@ -287,7 +292,7 @@ IPay88SDK.shared.checkout(currentViewController: self, payRequest: payRequest, d
     ```
     Apple88KEYKH00001ORD1188100KHR1
     ```
-    - The resulting has signature value equals to (using SHA1 algorithm)
+    - The resulting has a signature value equal to (using the SHA1 algorithm)
     ```
     KiCecyU86ZOFk15jXwOAvHdw/1M=
     ```
@@ -295,26 +300,25 @@ IPay88SDK.shared.checkout(currentViewController: self, payRequest: payRequest, d
 
 
 ### 6. Backend Post Feature
-The Backend POST feature is server to server technology. It does not depend on the `IPay88Sdk's Payment Screen` to return payment response data to `Merchant App`. With this feature implemented, your system still can get the payment status on the backend (asynchronously) even if the `IPay88Sdk's Payment Screen` fails to get status from IPay88 System which may be due to a closed `IPay88Sdk's Payment Screen`, internet connection timeout and etc.
+The Backend POST feature is server-to-server technology. It does not depend on the `IPay88Sdk's Payment Screen` to return payment response data to the `Merchant App`. With this feature implemented, your system still can get the payment status on the backend (asynchronously) even if the `IPay88Sdk's Payment Screen` fails to get status from IPay88 System which may be due to a closed `IPay88Sdk's Payment Screen`, internet connection timeout and etc.
 
 #### 1. Prerequisite
-
 - This Backend post feature will ONLY return status if the transaction is a payment `success`. No status will return if the payment is `failed`.
-- The Backend page should implement checking on some fields such as `Signature` (Please refer to [5. Signature Response](#5-signature-response)) and `Amount` to prevent user hijack merchant system.
-- The backend page should not have session related code so that merchant systems are still able accept payment status from IPay88 System even if the user is logged out or the session is expired.
-- You need to implement a check to determine "backend page" to update the order so it won't update order status in merchant system more than 1 time.
+- The Backend page should implement checking on some fields such as `Signature` (Please refer to [5. Signature Response](#5-signature-response)) and `Amount` to prevent users hijack the merchant system.
+- The backend page should not have session-related code so that merchant systems are still able to accept payment status from the IPay88 System even if the user is logged out or the session is expired.
+- You need to implement a check to determine the "backend page" to update the order so it won't update order status in the merchant system more than 1 time.
 - After receiving the payment success status, IPay88 OPSG will simultaneously return payment status to the SDK's Callback and "backend page".
 
 #### 2. Implementation
-On the merchant website, create a page to accept backend post response parameters from IPay88 System.
+On the merchant website, create a page to accept backend post response parameters from the IPay88 System.
 
-The Backend Post response parameters are same like [3.2.2 Payment Response Properties](#322-payment-response-properties) but use the Capitalization (Eg. `merchantCode` -> `MerchantCode`).
+The Backend Post response parameters are the same as [3.2.2 Payment Response Properties](#322-payment-response-properties) but use the Capitalization (Eg. `merchantCode` -> `MerchantCode`).
 
-- Step1. Specify your "backend page" in [3.1.2 Payment Request Properties](#312-payment-request-properties) on field named `backendURL`.
-- Step2. On your "backend page" you have to write out the word `RECEIVEOK` as an acknowledgement when you get the payment success status from IPay88 System. And IPay88 System will re-try send the payment status to the "backend page" up to 3 times on different interval if no `RECEIVEOK` acknowledgement detected.
+- Step1. Specify your "backend page" in [3.1.2 Payment Request Properties](#312-payment-request-properties) on a field named `backendURL`.
+- Step2. On your "backend page", you have to write out the word `RECEIVEOK` as an acknowledgment when you get the payment success status from the IPay88 System. And IPay88 System will re-try send the payment status to the "backend page" up to 3 times on different intervals if no `RECEIVEOK` acknowledgement is detected.
 
-    Note: 
-    > Make sure just the word `RECEIVEOK` only on your "backend page" without any HTML tag on the page.
+  Note:
+  > Make sure just the word `RECEIVEOK` only on your "backend page" without any HTML tag on the page.
 
 #### 3. Sample Code
 ASP Classic
@@ -375,27 +379,26 @@ PHP
 ##### 1.1 Credit & Debit Card
 Payment Method Name |  PaymentId (USD)| Logo
 -------------       | :-------------: | :-------------:
-Credit Card         |   1             |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/CC.svg" />
-UnionPay            |   15            |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/MPGS_UPI.svg" />
+Credit Card         |   1             |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/CAMPUCARD.svg" />
+UnionPay            |   15            |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/MPGS_UPI.svg" />
 
 ##### 1.2 eWallet
 Payment Method Name |  PaymentId (USD)|  PaymentId (KHR)| Logo
 -------------       | :-------------: | :-------------: | :-------------:
-eMoney              |   9             |     10          |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/EW_EMONEY.svg" />
-Pi Pay              |   11            |                 |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/EW_PIPAY.svg" />
-Alipay              |   233           |                 |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/QR_ALIPAY.svg" />
-Wing                |   235           |     236         |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/EW_ONLINEEWING.svg" />
-WeChat Pay          |   240           |                 |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/QR_WECHAT.svg" />
-KHQR                |   248           |     249         |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/QR_KHQR.svg" />
+eMoney              |   9             |     10          |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/EW_EMONEY.svg" />
+Pi Pay              |   11            |                 |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/QR_PIPAY.svg" />
+Alipay              |   233           |                 |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/alipay.svg" />
+Wing                |   235           |     236         |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/EW_WING.svg" />
+WeChat Pay          |   240           |                 |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/QR_WECHAT.svg" />
+KHQR                |   248           |     249         |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/QR_KHQR.svg" />
 
 ##### 1.3 Online Banking
 Payment Method Name |  PaymentId (USD)|  PaymentId (KHR)| Logo
 -------------       | :-------------: | :-------------: | :-------------:
-Acleda XPAY         |   3             |     4           |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/OB_ACLEDAXPAY.svg" />
-Chip Mong Pay       |   238           |     239         |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/OB_CHIPMONG.svg" />
-Campu Direct Debit  |   242           |     243         |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/OB_CAMPUDIRECTDEBIT.svg" />
-AMK Online Card     |   246           |     247         |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/OB_AMKCARD.svg" />
-Prince Bank QR      |   251           |     252         |   <img width="35" src="https://payment.ipay88.com.kh/PG/assets/images/bank/QR_PRINCE_BANK.svg" />
+Acleda XPAY         |   3             |     4           |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/ACLEDAXPAYLOGO.svg" />
+Chip Mong Pay       |   238           |     239         |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/OB_CHIPMONG.svg" />
+Campu Direct Debit  |   242           |     243         |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/OB_CAMPUDIRECTDEBIT.svg" />
+AMK Online Card     |   246           |     247         |   <img width="35" src="https://epay.ipay88.com.kh/prevapi/assets/icon/OB_AMKCARD.svg" />
 
 #### 2. Currency
 Currency Code   |  Description
@@ -417,7 +420,7 @@ Permission not allow        |   Your AppId or the shared credentials is not matc
 ### SDK Version Updates
 #### Version >= 1.0.1
 ##### 1. WeChat In-App Payment Configuration
-- Add below code to your `Info.plist`, and set the value of Wechat Pay AppId which you received from IPay88 Team.
+- Add source codes below to your `Info.plist`, and set the value of the WeChat Pay AppId that you received from the IPay88 Team.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

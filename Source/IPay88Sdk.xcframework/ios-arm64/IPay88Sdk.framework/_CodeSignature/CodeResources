@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		OHgmhL6HTB2FE6GNM9iIyoTBAgo=
+		KCrve33GnUigKJznMuWGnvjeuOU=
 		</data>
 		<key>Headers/IPay88Sdk-Swift.h</key>
 		<data>
-		tggFYT+0sX11tHVNjBkkHoKx3jY=
+		dr9p57F/z3M2DObil0t07YaCiu8=
 		</data>
 		<key>Headers/IPay88Sdk.h</key>
 		<data>
@@ -30,27 +30,35 @@
 		</data>
 		<key>IPay88ViewController.nib</key>
 		<data>
-		PFbYbtPonb9LE9h01bEHsVMGPEc=
+		ioEwDzqEXfFjz5/ik66TvwmyYys=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		UFiSAAOdrPslna16if8B5fbfV0A=
+		tzzevGzbo078OFZ+o8KNUfvNerw=
+		</data>
+		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.abi.json</key>
+		<data>
+		mUN0DGQXm+TnDuTp2jxyogN+exI=
+		</data>
+		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<data>
+		NqAUe9pQUOmuMWS7+n5mS5oGqiw=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		oNAC3rTa/EBdqV6m/r7DbWlmlfM=
+		FIQtRJVDvXnFC0HApvG2XT3KWZA=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		h8svXArgLIv8FKEQ91RJ84E1nTM=
+		NqAUe9pQUOmuMWS7+n5mS5oGqiw=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		i0Q0ZBWD8xdzQJ7wStGMXcO/Fy0=
+		B5S6H5ViONxs9h2I/lcznuxd4LI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		Xyesv3CR87yop5aI/SHV+ZEkVco=
+		22hoeuRIWhYBV12IdBCSP3nR30g=
 		</data>
 		<key>README.txt</key>
 		<data>
@@ -63,14 +71,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UB9HDkrQ2f1viUegK3Bc/lIt6AcH4rJjAloYfnqFWQc=
+			Eg0Bp/WoRzA8ceQYkuCADt0UoMK2E4z11VaH5XSGokk=
 			</data>
 		</dict>
 		<key>Headers/IPay88Sdk-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			B2NGRl6vgoX8cGkgW9oxSZmY+RDnVzt1mTDoRBQ2HdY=
+			2FlxPfAmWa41XH4uvcfla8n55/dqkXPhCs9qdPtB9ww=
 			</data>
 		</dict>
 		<key>Headers/IPay88Sdk.h</key>
@@ -105,35 +113,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YEmPesxThOqysmi692hEdyN4i2FVnR8JHoYrb/2ef0g=
+			qD5RdFYBmVoff58zHqNdZbMrDHz4jkW9WyZlUgXDUW0=
+			</data>
+		</dict>
+		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MTOJqxJbL6MgPoGo25Zdn1SEpv+TpcOZ6EVuC0wRSa4=
+			</data>
+		</dict>
+		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Q9gsNY50/5WCc4UPHUY92GdYm1CEC/bJpk0AhCSSL7s=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CI0GAuAL32m8h2W2aeZhWNqhsVgzD5be7ThtbUmiMqE=
+			3/lWkaNhAjbZyQnyuSQeuR7HU3TIBPyzhumSCY/PwUI=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/xZA/9m+6cB3NbylNRHIwoxgY8n46sEPIEXQ0bwyM1Q=
+			Q9gsNY50/5WCc4UPHUY92GdYm1CEC/bJpk0AhCSSL7s=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xhwxkR3W9OoMD1hzzW+Kp0bQZoFttCDde77JYMrHcsc=
+			YLQCQyH14oq3LJ23cUjmwUYwPNv7P04TJM3dAc8kmtU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D6jUe9qGRQDCJVi2t7isQuh0SWYow4zuVb8VvR56MyM=
+			QTzlnKELTVtDCEs48bgISnlfuUawEiNe/A1DcJ7mu90=
 			</data>
 		</dict>
 		<key>README.txt</key>

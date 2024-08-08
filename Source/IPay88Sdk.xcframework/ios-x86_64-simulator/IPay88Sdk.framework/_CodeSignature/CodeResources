@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		OHgmhL6HTB2FE6GNM9iIyoTBAgo=
+		KCrve33GnUigKJznMuWGnvjeuOU=
 		</data>
 		<key>Headers/IPay88Sdk-Swift.h</key>
 		<data>
-		tggFYT+0sX11tHVNjBkkHoKx3jY=
+		xfzsdoe/k7D4BaFKDx1K9d0akO0=
 		</data>
 		<key>Headers/IPay88Sdk.h</key>
 		<data>
@@ -30,27 +30,35 @@
 		</data>
 		<key>IPay88ViewController.nib</key>
 		<data>
-		PFbYbtPonb9LE9h01bEHsVMGPEc=
+		ioEwDzqEXfFjz5/ik66TvwmyYys=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bXoShGJkFGwA+cPobrPYrZVQwOQ=
+		kMrI+/hCFiGnzgVbjOew96yE/Hg=
+		</data>
+		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		YTQ3o/LUFDbubj2uXhBvUSbUloI=
+		</data>
+		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		BUFJYXKXyfuf7KuOnd3f3PxcMv4=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		+emwKlxpKNeMm9xdK+ZL9K5FdgE=
+		iFgte7WcEaSdyfUSE5jK8diAo/Y=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		zNZbSFy6eiatGsRbgWeqHlGVWZA=
+		BUFJYXKXyfuf7KuOnd3f3PxcMv4=
 		</data>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		P5s1JInnzmZ34yJdkZyAcm60vfY=
+		3+XwF6UIch9+7EFCS2B9pbOC15s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		Xyesv3CR87yop5aI/SHV+ZEkVco=
+		22hoeuRIWhYBV12IdBCSP3nR30g=
 		</data>
 		<key>README.txt</key>
 		<data>
@@ -63,14 +71,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UB9HDkrQ2f1viUegK3Bc/lIt6AcH4rJjAloYfnqFWQc=
+			Eg0Bp/WoRzA8ceQYkuCADt0UoMK2E4z11VaH5XSGokk=
 			</data>
 		</dict>
 		<key>Headers/IPay88Sdk-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			B2NGRl6vgoX8cGkgW9oxSZmY+RDnVzt1mTDoRBQ2HdY=
+			Qe2mMLx2nLqPZZnsmxrenphkQnjysYk8FL67TZAdXGQ=
 			</data>
 		</dict>
 		<key>Headers/IPay88Sdk.h</key>
@@ -105,35 +113,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YEmPesxThOqysmi692hEdyN4i2FVnR8JHoYrb/2ef0g=
+			qD5RdFYBmVoff58zHqNdZbMrDHz4jkW9WyZlUgXDUW0=
+			</data>
+		</dict>
+		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wxJ3j4Y+3hnYwIGczpQMeH2rEdzSxuhbb4CBcWGVHsU=
+			</data>
+		</dict>
+		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jpwzwaJ72fd1NBy5eMRd2UwRJp3BTLQiRdVGdFNHG4k=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aFdK84qgSlg9MLMkPbT0ulIge4bPRwZ8SHy0mfmDXCQ=
+			I9IA/jaejMdIzVDEw5x/qnnvG0rY37dakOkc9PKPmZM=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K6AFx2pDP36bM/cp2NYaV0iEN6XKiFJwfUtVmLd8Lp4=
+			jpwzwaJ72fd1NBy5eMRd2UwRJp3BTLQiRdVGdFNHG4k=
 			</data>
 		</dict>
 		<key>Modules/IPay88Sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j33AFHXV58QMG9spnPHaKyrE3q1CViEnLuQLXFf5lyI=
+			bKIPBV8eCxoGTVvybMyazo7fefB1utELo/zQqPsTy6M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D6jUe9qGRQDCJVi2t7isQuh0SWYow4zuVb8VvR56MyM=
+			QTzlnKELTVtDCEs48bgISnlfuUawEiNe/A1DcJ7mu90=
 			</data>
 		</dict>
 		<key>README.txt</key>
